@@ -1,6 +1,6 @@
 <?php
 require 'functions.php';
-$user = query("SELECT * FROM Admins")
+$admins = query("SELECT * FROM admins")
 ?>
 
 <!DOCTYPE html>
@@ -52,14 +52,14 @@ $user = query("SELECT * FROM Admins")
                 <th>Asal Kota</th>
             </tr>
 
-            <?php if (empty($Admins)) : ?>
+            <?php if (empty($admins)) : ?>
                 <tr>
                     <td colspan="7" align="center">Data pelanggan tidak di temukan</td>
                 </tr>
             <?php endif; ?>
 
             <?php $i = 1; ?>
-            <?php foreach ($Admins as $row) : ?>
+            <?php foreach ($admins as $row) : ?>
                 <tr>
                     <td><?= $i; ?></td>
                     <td>
